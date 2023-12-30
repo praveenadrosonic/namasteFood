@@ -1,0 +1,82 @@
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #65B741; */
+}
+
+.logo-img img{
+    width: 11%;
+    border-radius: 50%;
+}
+
+.cart-logo-img {
+    width: 10%;
+}
+
+.navbar-list {
+    list-style-type: none;
+    display: flex;
+}
+
+.navbar-item {
+    flex: 1;
+}
+
+.logo-img,
+.navbar 
+{
+    flex: 7;
+}
+
+.navbar-item a {
+    text-decoration: none;
+    color:black;
+}
+
+.navbar-item a:hover {
+    color:#9b6868;
+}
+
+.logo-img img {
+    margin-left: 5%;
+}
+
+.header {
+    border: 1px solid black;
+}
+
+.restaurant-card {
+    
+    margin:5px;
+    padding:5px;
+    width: 200px;
+    background-color: #cab0b0;
+    border:1px solid white;
+}
+
+.restaurant-card img{
+    width: 100%;
+    height:150px;
+}
+
+.restaurant-card:hover {
+    border: 1px solid black;
+}
+
+.restaurant-description {
+    padding: 5px;
+}
+
+.restaurant-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.top-rated {
+    margin:2%;
+}
