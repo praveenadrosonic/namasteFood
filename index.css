@@ -80,3 +80,10 @@ body {
 .top-rated {
     margin:2%;
 }
+
+.top-rated-restaurants-container {
+    border:2px solid black;
+    margin-bottom:4rem;
+    max-height:400px;
+    overflow-y: auto;
+}
