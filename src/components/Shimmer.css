@@ -3,11 +3,19 @@
     flex-wrap:wrap;
 }
 
-.restaurant-card {
+.shimmer-card {
     margin:5px;
     padding:5px;
     width: 200px;
+    height: 400px;
     background-color: #f0f0f0;
     border:1px solid white;
-    height
+}
+
+.top-rated-shimmer {
+    margin:2%;
+    background-color: #f0f0f0;
+    border:1px solid white;
+    height:50px;
+    width:250px;
 }

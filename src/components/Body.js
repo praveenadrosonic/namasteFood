@@ -1,10 +1,12 @@
 import RestaurantCard from "./RestaurantCard";
 import { useState,useEffect } from "react";
 import {RESTAURANT_API_URL} from "../utils/constants.js"
+import Shimmer from "./Shimmer.js";
 const Body = () => {
     const [restaurantList,setRestaurantList] = useState([]);
     const [restaurantTopList,setTopRestaurantList] = useState([]);
-    const [topRatedText,setTopRatedText] =useState('Top Rated Restaurants :');
+    const [topRatedText,setTopRatedText] = useState('Top Rated Restaurants :');
+    
 
     const topFilterToggle = () => {
         if(topRatedText === 'Top Rated Restaurants :') {
@@ -21,17 +23,16 @@ const Body = () => {
     },[])
 
     const fetchRestaurantData = async () => {
-        const data = await fetch(RESTAURANT_API_URL);
+        const data = await fetch(RESTAURANT_API_URL).catch(e => console.log(e));
         const jsonData = await data.json();
-        console.log(jsonData);
+        console.log(data);
         setRestaurantList(jsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     }
 
-    if(restaurantList.length === 0) {
-        return <span className="loader"></span>;
-    }
 
-    return (
+    return restaurantList.length === 0 ? 
+    (<Shimmer/>) : 
+    (
         <>
             <div className="search-container">Search</div>
             <button className="top-rated" onClick={topFilterToggle}><h2>{topRatedText}</h2></button>
