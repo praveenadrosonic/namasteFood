@@ -2,6 +2,7 @@
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
 .header {
     display: flex;
     justify-content: center;
@@ -77,9 +78,6 @@ body {
     flex-wrap: wrap;
 }
 
-.top-rated {
-    margin:2%;
-}
 
 .top-rated-restaurants-container {
     border:2px solid black;
@@ -98,6 +96,15 @@ body {
     animation: rotation 1s linear infinite;
     margin-left:40%;
     margin-top:10%
+}
+.search-container {
+    margin: 1% 0%;
+}
+.search-container button,.search-container input {
+    padding : 1% 2%;
+}
+.search-container button {
+    margin-left:2%;
 }
 
 @keyframes rotation {
